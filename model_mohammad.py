@@ -62,8 +62,8 @@ train_smiles, test_smiles, train_y, test_y = train_test_split(
 train_ds = AffinityDataset(train_smiles, train_y, tokenizer, max_length)
 test_ds  = AffinityDataset(test_smiles,  test_y,  tokenizer, max_length)
 
-train_loader = DataLoader(train_ds, batch_size=16, shuffle=True)
-test_loader  = DataLoader(test_ds,  batch_size=16, shuffle=False)
+train_loader = DataLoader(train_ds, batch_size=64, shuffle=True)
+test_loader  = DataLoader(test_ds,  batch_size=64, shuffle=False)
 
 # 4. Model definition
 class ChemBERTaRegressor(nn.Module):
