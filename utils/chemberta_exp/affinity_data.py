@@ -45,7 +45,7 @@ class AffinityDataset(Dataset):
 def get_dataloaders(
     csv_path: str,
     smiles_col: str = "smiles",
-    target_col: str = "E_score2",
+    target_col: str = "S", #"E_score2",
     batch_size: int = 64,
     test_size: float = 0.30,
     random_state: int = 42,
